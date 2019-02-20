@@ -8,6 +8,7 @@ import { EventosComponent } from "./pages/eventos/eventos.component";
 import { NopagefoundComponent } from "./shared/nopagefound/nopagefound.component";
 import { PagesComponent } from "./pages/pages.component";
 import { PerfilComponent } from "./pages/perfil/perfil.component";
+import { LotesComponent } from "./pages/lotes/lotes.component";
 
 
 const appRoutes: Routes = [
@@ -15,10 +16,11 @@ const appRoutes: Routes = [
     component: PagesComponent,
     children: [
       { path: 'home', component: HomeComponent },
-      {  path: 'campos', component: CamposComponent },
+      { path: 'campos', component: CamposComponent },
       { path: 'variedades', component: VariedadesComponent },
       { path: 'eventos', component: EventosComponent },
       { path: 'perfil', component: PerfilComponent },
+      { path: 'lotes', component: LotesComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]
   },

@@ -20,6 +20,7 @@ import { EventosComponent } from './pages/eventos/eventos.component';
 import { from } from 'rxjs';
 import { PagesComponent } from './pages/pages.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { LotesComponent } from './pages/lotes/lotes.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
     VariedadesComponent,
     EventosComponent,
     PagesComponent,
-    PerfilComponent
+    PerfilComponent,
+    LotesComponent
   ],
   imports: [
     BrowserModule,
