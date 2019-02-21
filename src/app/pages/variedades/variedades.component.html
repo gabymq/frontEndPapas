@@ -1,11 +1,19 @@
 <div class="row">
   <h2>Variedades</h2>
 
+  <div>
+      <button type="button" class="btn btn-link">
+          <button [routerLink]="['/create_variedades']">Crear</button>
+          <button [routerLink]="['/edit_variedades']">Editar</button>
+          <button [routerLink]="['/delete_variedades']">Borrar</button>
+      </button>
+  </div>
+
   <table class="table">
     <thead>
       <tr>
         <th>Nombre de la Variedad</th>
-        <th>Descripcion</th>
+        <th>Descripción</th>
 
 
       </tr>
