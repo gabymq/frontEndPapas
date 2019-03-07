@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { API_URL } from '../config/backend';
+import { IVariedad, IRes, IPagedRes } from '../interface';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,11 @@ export class VariedadesService {
 
   constructor(private http: HttpClient) { }
 
-  postVariedades(name: string, description: string) {
+  postVariedades(args: IVariedad) {
     const url = `${this.apiUrl}variedades`;
-    const body = { name, description };
 
-    return this.http.post(url, body).pipe(
-      map((res: any) => res.data)
+    return this.http.post(url, args).pipe(
+      map((res: IRes<IVariedad>) => res.data)
     );
   }
 
@@ -25,7 +25,7 @@ export class VariedadesService {
     const url = `${this.apiUrl}variedades`;
 
     return this.http.get(url).pipe(
-      map((res: any) => res.data)
+      map((res: IPagedRes<IVariedad>) => res.data)
     );
   }
 
@@ -33,15 +33,15 @@ export class VariedadesService {
     const url = `${this.apiUrl}variedades/${id}`;
 
     return this.http.get(url).pipe(
-      map((res: any) => res.data)
+      map((res: IRes<IVariedad>) => res.data)
     );
   }
 
-  putVariedades(id: string, body: any) {
+  putVariedades(id: string, body: IVariedad) {
     const url = `${this.apiUrl}variedades/${id}`;
 
     return this.http.put(url, body).pipe(
-      map((res: any) => res.data )
+      map((res: IRes<IVariedad>) => res.data )
     );
   }
 
@@ -49,7 +49,7 @@ export class VariedadesService {
     const url = `${this.apiUrl}variedades/${id}`;
 
     return this.http.delete(url).pipe(
-      map((res: any) => res.data )
+      map((res: IRes<IVariedad>) => res.data )
     );
   }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { IEvento, IRes } from '../interface';
+import { IEvento, IRes, IPagedRes } from '../interface';
 import { API_URL } from '../config/backend';
 
 @Injectable({
@@ -24,7 +24,7 @@ export class EventosService {
     const url = `${this.apiUrl}eventos`;
 
     return this.http.get(url).pipe(
-      map((res: IRes<IEvento>) => res.data)
+      map((res: IPagedRes<IEvento>) => res.data)
     );
   }
 

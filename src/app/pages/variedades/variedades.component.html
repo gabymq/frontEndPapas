@@ -2,11 +2,9 @@
   <h2>Variedades</h2>
 
   <div>
-      <button type="button" class="btn btn-link">
-          <button [routerLink]="['/create_variedades']">Crear</button>
-          <button [routerLink]="['/edit_variedades']">Editar</button>
-          <button [routerLink]="['/delete_variedades']">Borrar</button>
-      </button>
+    <button type="button" class="btn btn-link">
+      <button [routerLink]="['/create_variedades']">Crear</button>
+    </button>
   </div>
 
   <table class="table">
@@ -14,15 +12,18 @@
       <tr>
         <th>Nombre de la Variedad</th>
         <th>Descripción</th>
-
-
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th></th>
-        <th></th>
-
+      <tr *ngFor="let variedad of variedades">
+        <th>{{variedad.name}}</th>
+        <th>{{variedad.description}}</th>
+        <th>
+          <div class="btn-group">
+            <a [routerLink]="['/edit_variedades/', variedad.id]" class="btn btn-secondary"><i class="mdi mdi-update"></i>Editar</a>
+            <a [routerLink]="['/delete_variedades/', variedad.id]" class="btn btn-secondary"><i class="mdi mdi-delete"></i>Borrar</a>
+          </div>
+        </th>
       </tr>
     </tbody>
   </table>

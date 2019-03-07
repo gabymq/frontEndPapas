@@ -36,6 +36,9 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { VariedadesComponent } from './pages/variedades/variedades.component';
 import { VariedadesService } from './services/variedades.service';
+import { CamposService } from './services/campos.service';
+import { EventosService } from './services/eventos.service';
+import { LotesService } from './services/lotes.service';
 
 @NgModule({
   declarations: [
@@ -72,7 +75,10 @@ import { VariedadesService } from './services/variedades.service';
     HttpClientModule
   ],
   providers: [
-    VariedadesService
+    VariedadesService,
+    CamposService,
+    EventosService,
+    LotesService
   ],
   bootstrap: [AppComponent]
 })

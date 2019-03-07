@@ -6,11 +6,17 @@ export interface IPaging {
   next?: string;
 }
 
+export interface IPagedRes<T= any> {
+  success: boolean;
+  message: string;
+  data:  T[];
+  paging: IPaging;
+}
+
 export interface IRes<T= any> {
   success: boolean;
   message: string;
-  data: T | T[];
-  paging?: IPaging;
+  data: T ;
 }
 
 export interface ICampo {
@@ -32,4 +38,9 @@ export interface ILote {
   peso: number;
   destinatario: string;
   campo_id: string;
+}
+
+export interface IVariedad {
+  name: string;
+  description: string;
 }

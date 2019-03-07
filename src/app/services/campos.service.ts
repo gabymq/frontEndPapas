@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { ICampo, IRes } from '../interface';
+import { ICampo, IRes, IPagedRes } from '../interface';
 import { API_URL } from '../config/backend';
 
 @Injectable({
@@ -24,7 +24,7 @@ export class CamposService {
     const url = `${this.apiUrl}campos`;
 
     return this.http.get(url).pipe(
-      map((res: IRes<ICampo>) => res.data)
+      map((res: IPagedRes<ICampo>) => res.data)
     );
   }
 

@@ -37,8 +37,8 @@ const appRoutes: Routes = [
 
       { path: 'variedades', component: VariedadesComponent },
       { path: 'create_variedades', component: CreateVariedadesComponent },
-      { path: 'edit_variedades', component: EditVariedadesComponent },
-      { path: 'delete_variedades', component: DeleteVariedadesComponent },
+      { path: 'edit_variedades/:id', component: EditVariedadesComponent },
+      { path: 'delete_variedades/:id', component: DeleteVariedadesComponent },
 
       { path: 'eventos', component: EventosComponent },
       { path: 'create_eventos', component: CreateEventosComponent },
