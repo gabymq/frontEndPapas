@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { ICampo } from '../interface';
+import { ICampo, IRes } from '../interface';
 import { API_URL } from '../config/backend';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class CamposService {
     const url = `${this.apiUrl}campos`;
 
     return this.http.post(url, args).pipe(
-      map((res: any) => res.data)
+      map((res: IRes<ICampo>) => res.data)
     );
   }
 
@@ -24,7 +24,7 @@ export class CamposService {
     const url = `${this.apiUrl}campos`;
 
     return this.http.get(url).pipe(
-      map((res: any) => res.data)
+      map((res: IRes<ICampo>) => res.data)
     );
   }
 
@@ -32,7 +32,7 @@ export class CamposService {
     const url = `${this.apiUrl}campos/${id}`;
 
     return this.http.get(url).pipe(
-      map((res: any) => res.data)
+      map((res: IRes<ICampo>) => res.data)
     );
   }
 
@@ -40,7 +40,7 @@ export class CamposService {
     const url = `${this.apiUrl}campos/${id}`;
 
     return this.http.put(url, body).pipe(
-      map((res: any) => res.data)
+      map((res: IRes<ICampo>) => res.data)
     );
   }
 
@@ -48,7 +48,7 @@ export class CamposService {
     const url = `${this.apiUrl}campos/${id}`;
 
     return this.http.delete(url).pipe(
-      map((res: any) => res.data)
+      map((res: IRes<ICampo>) => res.data)
     );
   }
 }
