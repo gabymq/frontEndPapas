@@ -41,6 +41,7 @@ export interface ILote {
 }
 
 export interface IVariedad {
+  id?: string;
   name: string;
   description: string;
 }

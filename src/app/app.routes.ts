@@ -21,7 +21,6 @@ import { CreateCamposComponent } from './pages/create-campos/create-campos.compo
 import { CreatePerfilComponent } from './pages/create-perfil/create-perfil.component';
 import { EditPerfilComponent } from './pages/edit-perfil/edit-perfil.component';
 import { DeletePerfilComponent } from './pages/delete-perfil/delete-perfil.component';
-import { DeleteVariedadesComponent } from './pages/delete-variedades/delete-variedades.component';
 
 
 const appRoutes: Routes = [
@@ -38,7 +37,6 @@ const appRoutes: Routes = [
       { path: 'variedades', component: VariedadesComponent },
       { path: 'create_variedades', component: CreateVariedadesComponent },
       { path: 'edit_variedades/:id', component: EditVariedadesComponent },
-      { path: 'delete_variedades/:id', component: DeleteVariedadesComponent },
 
       { path: 'eventos', component: EventosComponent },
       { path: 'create_eventos', component: CreateEventosComponent },
@@ -63,5 +61,3 @@ const appRoutes: Routes = [
 ];
 
 export const APP_ROUTES = RouterModule.forRoot( appRoutes, { useHash: true });
-
-

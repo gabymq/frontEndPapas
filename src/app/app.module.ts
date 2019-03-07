@@ -7,7 +7,6 @@ import { HttpClientModule} from '@angular/common/http';
 
 import { APP_ROUTES } from './app.routes';
 
-
 import { AppComponent } from './app.component';
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
 import { CamposComponent } from './pages/campos/campos.component';
@@ -18,7 +17,6 @@ import { CreatePerfilComponent } from './pages/create-perfil/create-perfil.compo
 import { CreateVariedadesComponent } from './pages/create-variedades/create-variedades.component';
 import { DeleteCamposComponent } from './pages/delete-campos/delete-campos.component';
 import { DeletePerfilComponent } from './pages/delete-perfil/delete-perfil.component';
-import { DeleteVariedadesComponent } from './pages/delete-variedades/delete-variedades.component';
 import { EditCamposComponent } from './pages/edit-campos/edit-campos.component';
 import { EditEventosComponent } from './pages/edit-eventos/edit-eventos.component';
 import { EditLotesComponent } from './pages/edit-lotes/edit-lotes.component';
@@ -52,7 +50,6 @@ import { LotesService } from './services/lotes.service';
     CreateVariedadesComponent,
     DeleteCamposComponent,
     DeletePerfilComponent,
-    DeleteVariedadesComponent,
     EditCamposComponent,
     EditEventosComponent,
     EditLotesComponent,

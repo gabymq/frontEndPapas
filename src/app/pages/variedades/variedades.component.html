@@ -20,8 +20,8 @@
         <th>{{variedad.description}}</th>
         <th>
           <div class="btn-group">
-            <a [routerLink]="['/edit_variedades/', variedad.id]" class="btn btn-secondary"><i class="mdi mdi-update"></i>Editar</a>
-            <a [routerLink]="['/delete_variedades/', variedad.id]" class="btn btn-secondary"><i class="mdi mdi-delete"></i>Borrar</a>
+            <a class="btn btn-secondary"><i class="mdi mdi-update"></i>Editar</a>
+            <a  (click)="deleteVariedad(variedad)" class="btn btn-secondary"><i class="mdi mdi-delete"></i>Borrar</a>
           </div>
         </th>
       </tr>
