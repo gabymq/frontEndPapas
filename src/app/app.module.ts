@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
 
 
 // Rutas
@@ -34,6 +35,7 @@ import { PagesComponent } from './pages/pages.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { VariedadesComponent } from './pages/variedades/variedades.component';
+import { VariedadesService } from './services/variedades.service';
 
 @NgModule({
   declarations: [
@@ -66,9 +68,12 @@ import { VariedadesComponent } from './pages/variedades/variedades.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTES
+    APP_ROUTES,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    VariedadesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

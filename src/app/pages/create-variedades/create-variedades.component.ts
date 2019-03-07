@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VariedadesService } from 'src/app/services/variedades.service';
 
 @Component({
   selector: 'app-create-variedades',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateVariedadesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _variedadesServices: VariedadesService) { }
 
   ngOnInit() {
   }
