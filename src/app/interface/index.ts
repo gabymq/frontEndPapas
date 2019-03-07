@@ -26,3 +26,10 @@ export interface IEvento {
   description: string;
   campo_id: string;
 }
+
+export interface ILote {
+  arpillas: number;
+  peso: number;
+  destinatario: string;
+  campo_id: string;
+}
